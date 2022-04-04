@@ -1,24 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Clicker : MonoBehaviour
 {
-	public KeyCode key;
 	bool active = false;
 	GameObject note;
+	public int points;
+	public Text pointsText;
 	
-    void Start()
-    {
-        
-    }
-
-    public void Update()
-    {
-		if(Input.GetKeyDown(key) && active){
+	void Start ()
+	{
+		points = 0;
+		setPointText();	
+	}
+	
+	
+		void OnMouseDown(){
+		if(active == true){
 			Destroy(note);
-		}        
-    }
+			points++;
+			setPointText();
+		}}        
+    
 	
 	public void OnTriggerEnter2D(Collider2D collision){
 		if(collision.gameObject.tag =="Note"){
@@ -30,4 +35,12 @@ public class Clicker : MonoBehaviour
 	 public void OnTriggerExit2D(Collider2D collision){
 		active = false;
 	}
+
+
+
+	void setPointText()
+	{
+		pointsText.text = "points:" + points.ToString ();
+	}
+	
 }
