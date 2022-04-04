@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject[] noteTypes;
-    // constrain 60 to 180
-    public float bpm = 120.0f;
+    public Text scoreText;
+    public Text streakText;
+
+    // constrain 60 to 120
+    public float bpm = 90.0f;
     
     float tempo;
     float m_spawnDelay = 1.0f;
@@ -20,10 +24,16 @@ public class GameManager : MonoBehaviour
     int randPoint;
     int notesUntilTap = 0;
 
+    int noteStreak = 0;
+    int missedNotes = 0;
+    int multiplier = 1;
+    int score = 0;
+    int noteValue = 50;
 
     void Start()
     {
         tempo = 60.0f / bpm;
+     
     }
 
     void Update()
@@ -51,5 +61,44 @@ public class GameManager : MonoBehaviour
             m_spawnDelay = noteDuration;
             m_spawnTimer = 0.0f;
         }
+
+        if (missedNotes >= 10)
+        {
+            // Game Over
+        }
+    }
+
+    public void Score()
+    {
+        noteStreak++;
+        if (noteStreak <= 8)
+        {
+            multiplier = 1;
+        } else if (noteStreak <= 16)
+        {
+            multiplier = 2;
+        } else if (noteStreak <= 24)
+        {
+            multiplier = 3;
+        } else
+        {
+            multiplier = 4;
+        }
+
+        score += noteValue * multiplier;
+
+        scoreText.text = score.ToString();
+        streakText.text = noteStreak.ToString();
+
+    }
+
+    public void Miss()
+    {
+        Debug.Log("Miss");
+
+        noteStreak = 0;
+        missedNotes++;
+
+        streakText.text = noteStreak.ToString();
     }
 }

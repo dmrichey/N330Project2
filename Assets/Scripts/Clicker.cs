@@ -7,33 +7,36 @@ public class Clicker : MonoBehaviour
 {
 	bool active = false;
 	GameObject note;
-	public int points;
-	public Text pointsText;
+
+	GameManager gm;
+	//public int points;
+	//public Text pointsText;
 	
 	void Start ()
 	{
-		points = 0;
-		setPointText();	
+		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
 	}
 	
 	
-		void OnMouseDown(){
-		if(active == true){
+	void OnMouseDown() {
+		if(active) {
 			Destroy(note);
-			points++;
-			setPointText();
-		}}        
+			//points++;
+			//setPointText();
+			gm.Score();
+		}
+	}        
     
 	
 	public void OnTriggerEnter2D(Collider2D collision){
-		if(collision.gameObject.tag =="Note"){
-			Debug.Log("Cross");
+		if(collision.gameObject.tag == "Note"){
+			//Debug.Log("Cross");
 			note = collision.gameObject;
 			active = true;
 		}
 	}
 	
-	 public void OnTriggerExit2D(Collider2D collision){
+	public void OnTriggerExit2D(Collider2D collision){
 		active = false;
 	}
 
@@ -41,7 +44,7 @@ public class Clicker : MonoBehaviour
 
 	void setPointText()
 	{
-		pointsText.text = "points:" + points.ToString ();
+		//pointsText.text = "points:" + points.ToString ();
 	}
 	
 }
