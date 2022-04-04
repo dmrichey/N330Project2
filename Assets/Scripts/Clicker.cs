@@ -15,25 +15,26 @@ public class Clicker : MonoBehaviour
 	void Start ()
 	{
 		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
-	}
-	
-	
+	}	
 	void OnMouseDown() {
-		if(active) {
+		if(active && note.tag=="Note") {
 			Destroy(note);
 			//points++;
 			//setPointText();
 			gm.Score();
 		}
-	}        
-    
-	
+	}            
 	public void OnTriggerEnter2D(Collider2D collision){
 		if(collision.gameObject.tag == "Note"){
-			//Debug.Log("Cross");
 			note = collision.gameObject;
 			active = true;
 		}
+		if(collision.gameObject.tag == "HoldNote"){
+			note = collision.gameObject;
+			active = true;
+		}
+		
+		
 	}
 	
 	public void OnTriggerExit2D(Collider2D collision){
