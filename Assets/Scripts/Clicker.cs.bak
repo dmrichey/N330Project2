@@ -42,6 +42,9 @@ public class Clicker : MonoBehaviour
 
 
 
-	
+	void setPointText()
+	{
+		//pointsText.text = "points:" + points.ToString ();
+	}
 	
 }
