@@ -27,8 +27,9 @@ public class Clicker : MonoBehaviour
 	
 	public void OnTriggerEnter2D(Collider2D collision){
 		if(collision.gameObject.tag =="Note"){
-		note = collision.gameObject;
-		active = true;
+			Debug.Log("Cross");
+			note = collision.gameObject;
+			active = true;
 		}
 	}
 	
