@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5991152620163535277}
   - component: {fileID: 5544921194280671663}
   m_Layer: 0
-  m_Name: Clicker1
+  m_Name: Clicker4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
