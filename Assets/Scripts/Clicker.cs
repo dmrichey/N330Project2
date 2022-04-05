@@ -8,7 +8,6 @@ public class Clicker : MonoBehaviour{
     bool active = false;
     GameObject note;
     string previous= "Note";
-
     GameManager gm;
         
     void Start (){
@@ -45,23 +44,18 @@ public class Clicker : MonoBehaviour{
 		else if(active && note.tag =="HoldNote"){
             if(previous == "Note"){	
 			/* Note->HoldNote if the previous one was a normal note,
-			then this note will need to be dragged to a spot with another note */
-			
+			then this note will need to be dragged to a spot with another note, so just make it draggable here*/
 			gm.setPrevious("HoldNote");
+			
 			}//end inner if
 			
 			else if( previous == "HoldNote"){
 			//HoldNote -> Note
 			// if the previous was a HoldNote, then it has to have a holdnote in the same hitbox
 			// they both disspear and both count for points.
-				
-				
 			gm.setPrevious("HoldNote");
 			}// end inner eif
 			} // end outer eif(HoldNote cases)
-    
-	
-	
 	}
         
         /* when a new note enters any of the 4 hitboxes,
