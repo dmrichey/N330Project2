@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     int multiplier = 1;
     int score = 0;
     int noteValue = 50;
-	string previous;
+	string previous = "Note";
 
     void Start()
     {
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
             }
             randPoint = Random.Range(0, spawnPoints.Length);
 
-            // Spawn Note
+            //Spawn Note
             Instantiate(noteTypes[curNoteType], spawnPoints[randPoint]);
             // Reset Timer
             curNoteLength = Random.Range(0, noteLengthOptions.Length);

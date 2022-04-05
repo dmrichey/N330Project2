@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] noteTypes;
     public Text scoreText;
     public Text streakText;
+	
+	
 
     // constrain 60 to 120
     public float bpm = 90.0f;
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
     int multiplier = 1;
     int score = 0;
     int noteValue = 50;
+	string previous = "Note";
 
     void Start()
     {
@@ -86,7 +89,9 @@ public class GameManager : MonoBehaviour
         }
 
         score += noteValue * multiplier;
-
+		
+		
+		
         scoreText.text = score.ToString();
         streakText.text = noteStreak.ToString();
 
@@ -101,4 +106,11 @@ public class GameManager : MonoBehaviour
 
         streakText.text = noteStreak.ToString();
     }
+	public void setPrevious(string setter){
+		previous = setter;
+	}
+	
+	public string getPrevious(){
+		return previous;
+	}
 }
