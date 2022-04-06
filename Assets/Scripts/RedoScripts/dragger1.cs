@@ -25,17 +25,14 @@ public class dragger1 : MonoBehaviour{
 	void OnMouseDown(){
 		if (active == true){
 		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
-		_dragOffset = transform.position - GetMousePos();
-		m_rb = GetComponent<Rigidbody2D>();
-		m_rb.velocity = new Vector2(0.0f, 0.0f);
 		}
 	}
 	void OnMouseDrag(){
 		if (active == true){
 		Destroy(gameObject);
+		gm.Score();
 		}
 	}
-	
 	Vector3 GetMousePos(){
 		var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 		mousePos.z=0;
@@ -50,16 +47,6 @@ public class dragger1 : MonoBehaviour{
         // Do something for box collider
      }
 	 
-	 /*if(collision.GetType() == typeof(CircleCollider2D)){
-		 Destroy(gameObject);
-		 Destroy(collision.gameObject);
-		 gm.Score();
-		 gm.Score();
-		 gm.setPrevious("Note");
-		// if it is a circle collider, then it is another note, delte both notes and do score()twice!		
-	}
-	*/
-	
 	}
 	
 }
