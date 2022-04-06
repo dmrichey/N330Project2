@@ -10,8 +10,6 @@ public class GameManager1 : MonoBehaviour
     public Text scoreText;
     public Text streakText;
 	
-	
-
     // constrain 60 to 120
     public float bpm = 90.0f;
     
@@ -106,6 +104,7 @@ public class GameManager1 : MonoBehaviour
 
         streakText.text = noteStreak.ToString();
     }
+
 	public void setPrevious(string setter){
 		previous = setter;
 	}

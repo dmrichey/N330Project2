@@ -20,41 +20,31 @@ public class dragger1 : MonoBehaviour{
         m_rb.velocity = new Vector2(0.0f, -3.0f);
     }
 	void Awake(){
-		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
-		 cam = Camera.main;
+		//gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
+		cam = Camera.main;
 	}
 	
 	void OnMouseOver(){
-		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
-		if(mouseDown = true && active == true){
+		//gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
+		if(Input.GetMouseButton(0) && active == true){
 			Destroy(gameObject);
             gm.Score();
 		}
 	}
-	
-	void OnMouseDown(){
-		mouseDown = true;	
-	}
-	
-	void OnMouseUp(){
-		mouseDown = false;
-	}
-
-
 
 	Vector3 GetMousePos(){
 		var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-		mousePos.z=0;
+		mousePos.z = 0;
 		return mousePos;	
 	}
 	
 	
-	 public void OnTriggerEnter2D(Collider2D collision){
+	public void OnTriggerEnter2D(Collider2D collision){
 		// if it is a box collider set to active 
 		if(collision.GetType() == typeof(BoxCollider2D)) {
 			active = true;
         // Do something for box collider
-     }
+		}
 	 
 	}
 	
