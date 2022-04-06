@@ -8,6 +8,7 @@ public class dragger1 : MonoBehaviour{
 	public GameObject clickerThree;
 	public GameObject clickerFour;
 	bool active = false;
+	bool mouseDown = false;
 	private Vector3 _dragOffset;
 	private Camera cam;
 	Rigidbody2D m_rb;
@@ -22,17 +23,27 @@ public class dragger1 : MonoBehaviour{
 		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
 		 cam = Camera.main;
 	}
-	void OnMouseDown(){
-		if (active == true){
+	
+	void Update(){
 		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
+		var x = GetMousePos();
+		var y = transform.position;
+		if((mouseDown = true && active == true)&&(x.x==y.x&&x.y==y.y)){
+			Destroy(gameObject);
+            gm.Score();
 		}
 	}
-	void OnMouseDrag(){
-		if (active == true){
-		Destroy(gameObject);
-		gm.Score();
-		}
+	
+	void OnMouseDown(){
+		mouseDown = true;	
 	}
+	
+	void OnMouseUp(){
+		mouseDown = false;
+	}
+
+
+
 	Vector3 GetMousePos(){
 		var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 		mousePos.z=0;
