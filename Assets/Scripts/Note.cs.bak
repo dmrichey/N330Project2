@@ -11,7 +11,7 @@ public class Note : MonoBehaviour
         m_rb = GetComponent<Rigidbody2D>();
         m_rb.velocity = new Vector2(0.0f, -3.0f);
 
-        Destroy(this.gameObject, 15f);
+        //Destroy(this.gameObject, 15f);
     }
 
     
