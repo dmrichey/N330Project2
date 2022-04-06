@@ -24,10 +24,12 @@ public class dragger1 : MonoBehaviour{
 		 cam = Camera.main;
 	}
 	
-	void Update(){
-		var x = GetMousePos();
-		var y = transform.position;
-		
+	void OnMouseOver(){
+		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
+		if((mouseDown = true && active == true){
+			Destroy(gameObject);
+            gm.Score();
+		}
 	}
 	
 	void OnMouseDown(){
@@ -38,12 +40,8 @@ public class dragger1 : MonoBehaviour{
 		mouseDown = false;
 	}
 
-	
-	
-	
-	
-	
-	
+
+
 	Vector3 GetMousePos(){
 		var mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 		mousePos.z=0;

@@ -13,7 +13,7 @@ public class MissedNote1 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Note"))
+        if (other.gameObject.CompareTag("Note")||other.gameObject.CompareTag("HoldNote"))
         {
             gm.Miss();
         }

@@ -24,11 +24,9 @@ public class dragger1 : MonoBehaviour{
 		 cam = Camera.main;
 	}
 	
-	void Update(){
+	void OnMouseOver(){
 		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
-		var x = GetMousePos();
-		var y = transform.position;
-		if((mouseDown = true && active == true)&&(x.x==y.x&&x.y==y.y)){
+		if(mouseDown = true && active == true){
 			Destroy(gameObject);
             gm.Score();
 		}

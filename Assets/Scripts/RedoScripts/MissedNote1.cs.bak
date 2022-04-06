@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MissedNote : MonoBehaviour
+public class MissedNote1 : MonoBehaviour
 {
     GameManager gm;
 
