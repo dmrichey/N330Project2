@@ -20,7 +20,6 @@ public class Clicker : MonoBehaviour{
         // *if the previous was a hold note, then they both go away score() twice.
         
     void OnMouseDown(){
-		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
         if(active && note.tag=="Note"){
 			Debug.Log("clicked Note");
 			Debug.Log(string.Format("previous = {0}", previous));

@@ -45,13 +45,11 @@ public class Clicker : MonoBehaviour{
             active = true;
 			
         }if(collision.gameObject.tag == "HoldNote"){
-			holdNote = collision.gameObject;
             active = true;
         }
     }
         
     public void OnTriggerExit2D(Collider2D collision){
-		//gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
         active = false;
     }
 }
