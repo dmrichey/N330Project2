@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1a203c48cb4fc534687a70bc187a2a13
+guid: 273f2e65b8d43844bb9cb36e85825bbf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,11 +47,11 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 9, y: 9, z: 10, w: 10}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -75,75 +75,10 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline:
-    - - {x: 67, y: 39}
-      - {x: 57, y: 46}
-      - {x: 48, y: 51}
-      - {x: 34, y: 57}
-      - {x: 18, y: 59}
-      - {x: 4, y: 59}
-      - {x: 4, y: -1}
-      - {x: 3, y: -80}
-      - {x: -5, y: -63}
-      - {x: -4, y: 94}
-      - {x: -4, y: 114}
-      - {x: 24, y: 107}
-      - {x: 44, y: 97}
-      - {x: 62, y: 83}
-      - {x: 78, y: 64}
-      - {x: 86, y: 41}
-      - {x: 89, y: 16}
-    - - {x: -0.5396042, y: -90.91373}
-      - {x: -11, y: -102}
-      - {x: -34, y: -112}
-      - {x: -58, y: -115}
-      - {x: -82, y: -109}
-      - {x: -89, y: -95}
-      - {x: -87, y: -84}
-      - {x: -71, y: -67}
-      - {x: -50, y: -59}
-      - {x: -26, y: -57}
-      - {x: -5, y: -63}
-      - {x: 3, y: -81}
+    outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
