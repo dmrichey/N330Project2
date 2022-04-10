@@ -13,6 +13,8 @@ public class dragger1 : MonoBehaviour{
 	private Camera cam;
 	Rigidbody2D m_rb;
 	GameManager gm;
+
+	public GameObject BlackExplosion;
 	
 	void Start (){
         gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
@@ -27,6 +29,7 @@ public class dragger1 : MonoBehaviour{
 	void OnMouseOver(){
 		//gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
 		if(Input.GetMouseButton(0) && active == true){
+			Instantiate(BlackExplosion, transform.position, transform.rotation);
 			Destroy(gameObject);
             gm.Score();
 		}

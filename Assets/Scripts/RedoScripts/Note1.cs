@@ -8,6 +8,8 @@ public class Note1 : MonoBehaviour{
     Rigidbody2D m_rb;
 	bool active = false;
 
+	public GameObject RedEplosion;
+
     void Start()
     {
         m_rb = GetComponent<Rigidbody2D>();
@@ -24,6 +26,7 @@ public class Note1 : MonoBehaviour{
 		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
         if(active==true){
 			Debug.Log("clicked Note");
+			Instantiate(RedEplosion, transform.position, transform.rotation);
 			Destroy(gameObject);
             gm.Score();
 			}

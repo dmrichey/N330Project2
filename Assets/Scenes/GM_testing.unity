@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -288,6 +289,25 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!95 &519420030
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4650d165e91e9dd4db8bbcf8bdf7896f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -455,6 +475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1070857881}
   - component: {fileID: 1070857880}
+  - component: {fileID: 1070857882}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -484,6 +505,8 @@ MonoBehaviour:
   - {fileID: 6310869369802248410, guid: d0d71354d4c60884083182b7fa31873e, type: 3}
   scoreText: {fileID: 1424852768}
   streakText: {fileID: 421235817}
+  missedText: {fileID: 0}
+  loseScreen: {fileID: 0}
   bpm: 90
 --- !u!4 &1070857881
 Transform:
@@ -499,6 +522,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1070857882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070857879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29bfcf653e3f17046ba6f3cb3b1254ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1098586232
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c156c3bfbc9b64eb7ee81d80cb94a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RedEplosion: {fileID: 0}
 --- !u!61 &1946633874
 BoxCollider2D:
   m_ObjectHideFlags: 0

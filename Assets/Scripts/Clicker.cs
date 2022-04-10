@@ -10,7 +10,8 @@ public class Clicker : MonoBehaviour{
 	GameObject holdNote;
     string previous= "Note";
     GameManager gm;
-        
+    public GameObject RedEplosion;
+
     void Start (){
         gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
     }     
@@ -25,7 +26,8 @@ public class Clicker : MonoBehaviour{
 			Debug.Log(string.Format("previous = {0}", previous));
 			// Note->Note if the previous note was a normal note, then it just can be clicked and scored by itself
             if (previous == "Note"){
-			Destroy(note);
+                Instantiate(RedEplosion, transform.position, transform.rotation);
+                Destroy(note);
             gm.Score();
             gm.setPrevious("Note"); 
 			}// end  inner if 

@@ -434,7 +434,7 @@ Transform:
   - {fileID: 317482087}
   - {fileID: 1430458730}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1053866779
 GameObject:
@@ -500,8 +500,101 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1066678140
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6174138908166498784, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_Name
+      value: BlackExplosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733684334063691872, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733684334063691872, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733684334063691872, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733684334063691872, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733684334063691872, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733684334063691872, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733684334063691872, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: TrailModule.colorOverLifetime.maxGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733684334063691872, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: TrailModule.colorOverLifetime.maxGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7733684334063691872, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: TrailModule.colorOverLifetime.maxGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203091530241995965, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203091530241995965, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.6984625
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203091530241995965, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.4090362
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203091530241995965, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -133.15855
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203091530241995965, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203091530241995965, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203091530241995965, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203091530241995965, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203091530241995965, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203091530241995965, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203091530241995965, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d312c1d2e8cc5645b6583c2e109e8a6, type: 3}
 --- !u!1 &1070857879
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +634,8 @@ MonoBehaviour:
   - {fileID: 6310869369802248410, guid: d0d71354d4c60884083182b7fa31873e, type: 3}
   scoreText: {fileID: 1424852768}
   streakText: {fileID: 421235817}
+  missedText: {fileID: 0}
+  loseScreen: {fileID: 0}
   bpm: 90
 --- !u!4 &1070857881
 Transform:
@@ -554,7 +649,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1098586232
 GameObject:
@@ -650,7 +745,7 @@ RectTransform:
   - {fileID: 1424852767}
   - {fileID: 421235816}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -725,7 +820,7 @@ Transform:
   m_LocalScale: {x: 10.8, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1424852766
 GameObject:
@@ -1119,7 +1214,7 @@ Transform:
   m_LocalScale: {x: 10.8, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1946633873
 MonoBehaviour:
@@ -1239,5 +1334,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
