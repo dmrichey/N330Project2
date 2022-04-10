@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,10 +10,10 @@ public class GameManager : MonoBehaviour
     public GameObject[] noteTypes;
     public Text scoreText;
     public Text streakText;
+    public Text missedText;
+    public GameObject loseScreen;
 	
-	
-
-    // constrain 60 to 120
+	// constrain 60 to 120
     public float bpm = 90.0f;
     
     float tempo;
@@ -33,6 +34,9 @@ public class GameManager : MonoBehaviour
     int noteValue = 50;
 	string previous = "Note";
 
+    float endTimer = 0.0f;
+    bool endGame = false;
+
     void Start()
     {
         tempo = 60.0f / bpm;
@@ -42,7 +46,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         m_spawnTimer += Time.deltaTime;
-
+        
         if (m_spawnTimer >= m_spawnDelay)
         {
             if (notesUntilTap <= 0)
@@ -65,10 +69,16 @@ public class GameManager : MonoBehaviour
             m_spawnTimer = 0.0f;
         }
 
-        if (missedNotes >= 10)
+        if (endGame)
         {
-            // Game Over
+            endTimer += Time.deltaTime;
         }
+
+        if (endTimer >= 1.5f)
+        {
+            SceneManager.LoadScene(0);
+        }
+
     }
 
     public void Score()
@@ -105,7 +115,21 @@ public class GameManager : MonoBehaviour
         missedNotes++;
 
         streakText.text = noteStreak.ToString();
+        missedText.text = "Missed: " + missedNotes.ToString() + "/10";
+
+        if (missedNotes >= 10)
+        {
+            GameEnd();
+        }
     }
+
+    public void GameEnd()
+    {
+        loseScreen.SetActive(true);
+
+        endGame = true;
+    }
+
 	public void setPrevious(string setter){
 		previous = setter;
 	}

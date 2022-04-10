@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GM_testing.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 8eb7f17982e5dc94b907695e457ef2d9
+  - enabled: 0
+    path: Assets/Scenes/RestartScene.unity
+    guid: 4e40f74292cd2f24bb2f0da0089d3206
+  - enabled: 1
+    path: Assets/Scenes/CameronScene.unity
+    guid: 128a7adde869115488484a7f254fc84c
   m_configObjects: {}
