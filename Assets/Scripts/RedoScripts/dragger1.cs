@@ -14,9 +14,12 @@ public class dragger1 : MonoBehaviour{
 	Rigidbody2D m_rb;
 	GameManager gm;
 
+	private Shake shake;
+
 	public GameObject BlackExplosion;
 	
 	void Start (){
+		shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
         gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
 		m_rb = GetComponent<Rigidbody2D>();
         m_rb.velocity = new Vector2(0.0f, -3.0f);
@@ -30,6 +33,7 @@ public class dragger1 : MonoBehaviour{
 		//gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
 		if(Input.GetMouseButton(0) && active == true){
 			Instantiate(BlackExplosion, transform.position, transform.rotation);
+			shake.CamShake();
 			Destroy(gameObject);
             gm.Score();
 		}

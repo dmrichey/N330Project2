@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Note
   - HoldNote
+  - ScreenShake
   layers:
   - Default
   - TransparentFX

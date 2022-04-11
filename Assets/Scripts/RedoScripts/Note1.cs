@@ -8,14 +8,16 @@ public class Note1 : MonoBehaviour{
     Rigidbody2D m_rb;
 	bool active = false;
 
+
+	private Shake shake;
 	public GameObject RedEplosion;
 
     void Start()
     {
         m_rb = GetComponent<Rigidbody2D>();
         m_rb.velocity = new Vector2(0.0f, -3.0f);
-
-        Destroy(this.gameObject, 15f);
+		shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+		Destroy(this.gameObject, 15f);
     }
 	
 	void Awake(){
@@ -26,6 +28,7 @@ public class Note1 : MonoBehaviour{
 		gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
         if(active==true){
 			Debug.Log("clicked Note");
+			shake.CamShake();
 			Instantiate(RedEplosion, transform.position, transform.rotation);
 			Destroy(gameObject);
             gm.Score();

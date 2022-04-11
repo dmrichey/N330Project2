@@ -11,9 +11,11 @@ public class Clicker : MonoBehaviour{
     string previous= "Note";
     GameManager gm;
     public GameObject RedEplosion;
+    private Shake shake;
 
     void Start (){
         gm = GameObject.Find("_GameManager").GetComponent<GameManager>();
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }     
         // *if it is a normaL blue note and the previous one is a normal note then it can just be clicked
         // *if the previous was a hold note, then the hold note has to be in the hitbox at the same time the note is for it to count, will be 2 points so do score() twice.
@@ -26,7 +28,8 @@ public class Clicker : MonoBehaviour{
 			Debug.Log(string.Format("previous = {0}", previous));
 			// Note->Note if the previous note was a normal note, then it just can be clicked and scored by itself
             if (previous == "Note"){
-                Instantiate(RedEplosion, transform.position, transform.rotation);
+                
+                shake.CamShake();
                 Destroy(note);
             gm.Score();
             gm.setPrevious("Note"); 
