@@ -476,6 +476,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: ScreenShake
       objectReference: {fileID: 0}
+    - target: {fileID: 5991152620163535277, guid: e7832bad31b047745a2bc17eb1d8fb73, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5991152620163535283, guid: e7832bad31b047745a2bc17eb1d8fb73, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -629,7 +633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710208226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.47, z: 0}
+  m_LocalPosition: {x: 0, y: -7, z: 0}
   m_LocalScale: {x: 10.8, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -695,7 +699,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926692720}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8c156c3bfbc9b64eb7ee81d80cb94a3, type: 3}
   m_Name: 
@@ -885,6 +889,10 @@ PrefabInstance:
     - target: {fileID: 5991152620163535276, guid: 3738f23c1d362f740913fecd3a16270a, type: 3}
       propertyPath: m_Name
       value: Clicker2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991152620163535277, guid: 3738f23c1d362f740913fecd3a16270a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5991152620163535283, guid: 3738f23c1d362f740913fecd3a16270a, type: 3}
       propertyPath: m_RootOrder
@@ -1212,6 +1220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clicker4
       objectReference: {fileID: 0}
+    - target: {fileID: 5991152620163535277, guid: 10b449ff01155c04fa2786a4ac894926, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5991152620163535283, guid: 10b449ff01155c04fa2786a4ac894926, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1281,6 +1293,10 @@ PrefabInstance:
     - target: {fileID: 5991152620163535276, guid: 1b299986b0116c54f89d9380ee78acac, type: 3}
       propertyPath: m_Name
       value: Clicker3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5991152620163535277, guid: 1b299986b0116c54f89d9380ee78acac, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5991152620163535283, guid: 1b299986b0116c54f89d9380ee78acac, type: 3}
       propertyPath: m_RootOrder

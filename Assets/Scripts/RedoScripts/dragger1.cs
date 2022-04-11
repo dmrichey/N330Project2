@@ -8,7 +8,7 @@ public class dragger1 : MonoBehaviour{
 	public GameObject clickerThree;
 	public GameObject clickerFour;
 	bool active = false;
-	bool mouseDown = false;
+	//bool mouseDown = false;
 	private Vector3 _dragOffset;
 	private Camera cam;
 	Rigidbody2D m_rb;
